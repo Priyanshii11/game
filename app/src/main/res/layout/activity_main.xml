@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C98347"
+    app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
 
@@ -19,13 +19,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.469" />
-
-    <TextureView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:theme="@style/Base.Theme.Game"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-34dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 

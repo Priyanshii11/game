@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         imageView = findViewById(R.id.logo2);
-        Animation move = AnimationUtils.loadAnimation(MainActivity.this, R.anim.top);
+         Animation move = AnimationUtils.loadAnimation(MainActivity.this, R.anim.top);
 
         imageView.startAnimation(move);
 

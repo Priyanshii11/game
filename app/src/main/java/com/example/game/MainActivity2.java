@@ -2,6 +2,7 @@ package com.example.game;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -32,8 +33,6 @@ public class MainActivity2 extends AppCompatActivity {
         btn2 = findViewById(R.id.dare);
 
     }
-
-
     public void spin(View view) {
         newDirection = random.nextInt(4000);
         int min = 1000, max = newDirection;
@@ -58,20 +57,7 @@ public class MainActivity2 extends AppCompatActivity {
                 Dialog dialog = new Dialog (MainActivity2.this);
                 dialog.setContentView(R.layout.custom_dailog);
                 dialog.show();
-                btn1.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                    }
-                });
-                btn2.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                    }
-                });
                 imageView.setEnabled(true);
-
             }
             @Override
             public void onAnimationRepeat(Animation animation) {
@@ -79,7 +65,6 @@ public class MainActivity2 extends AppCompatActivity {
         });
         lastDirection = newDirection;
         imageView.startAnimation(rotate);
-
     }
 }
 
