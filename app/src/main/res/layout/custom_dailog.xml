@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#4695D3"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="150dp"
+        android:src="@drawable/truthordare"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/truth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Truth"
+            android:textStyle="bold"
+            android:textSize="34sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="#000000"
+            android:padding="15dp"
+            android:layout_margin="5dp"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:background="#C3B53A"/>
+
+        <Button
+            android:id="@+id/dare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dare"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-light"
+            android:textSize="34sp"
+            android:layout_margin="5dp"
+            android:textColor="#000000"
+            android:padding="15dp"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:background="#E1457B"/>
+    </LinearLayout>
+
+
+</LinearLayout>
