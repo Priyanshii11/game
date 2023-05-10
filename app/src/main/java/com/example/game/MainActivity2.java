@@ -9,28 +9,29 @@ import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import java.util.Random;
 
 public class MainActivity2 extends AppCompatActivity {
-
-    Button btn1,btn2;
-    private ImageView imageView;
+     private ImageView imageView;
+    Button truth , dare ;
+    TextView exit;
     private Random random = new Random();
     private int newDirection, lastDirection;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main2);
-
-
         imageView = findViewById(R.id.imageView);
-        btn1 = findViewById(R.id.truth);
-        btn2 = findViewById(R.id.dare);
+        truth = findViewById(R.id.truth);
+        dare = findViewById(R.id.dare);
+        exit = findViewById(R.id.cross);
+
 
     }
     public void spin(View view) {
@@ -52,12 +53,10 @@ public class MainActivity2 extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-
-
+                imageView.setEnabled(true);
                 Dialog dialog = new Dialog (MainActivity2.this);
                 dialog.setContentView(R.layout.custom_dailog);
                 dialog.show();
-                imageView.setEnabled(true);
             }
             @Override
             public void onAnimationRepeat(Animation animation) {
@@ -66,5 +65,6 @@ public class MainActivity2 extends AppCompatActivity {
         lastDirection = newDirection;
         imageView.startAnimation(rotate);
     }
+
 }
 

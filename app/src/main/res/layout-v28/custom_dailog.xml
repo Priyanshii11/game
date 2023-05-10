@@ -6,39 +6,58 @@
     android:background="#4695D3"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/cross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:layout_marginLeft="6dp"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textColor="@color/black" />
+
     <ImageView
-        android:layout_width="410dp"
+        android:layout_width="400dp"
         android:layout_height="150dp"
-        android:src="@drawable/truthordare"/>
+        android:src="@drawable/truthordare" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:weightSum="2">
 
         <Button
             android:id="@+id/truth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@drawable/shape"
+            android:layout_weight="1"
+            android:backgroundTint="#E14514"
             android:fontFamily="sans-serif-light"
             android:padding="15dp"
             android:text="Truth"
-            android:onClick="truth"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="34sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/dare"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@drawable/shape"
+            android:layout_weight="1"
             android:fontFamily="sans-serif-light"
             android:padding="15dp"
             android:text="Dare"
-            android:onClick="dare"
+            android:backgroundTint="#D8AD2D"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="34sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
 
 </LinearLayout>
