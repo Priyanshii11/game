@@ -1,8 +1,12 @@
 package com.example.game;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -11,29 +15,34 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
 
 import java.util.Random;
 
-public class MainActivity2 extends AppCompatActivity {
-     private ImageView imageView;
-    Button truth , dare ;
+public class MainActivity2<val> extends AppCompatActivity {
+    private ImageView imageView;
     TextView exit;
     private Random random = new Random();
     private int newDirection, lastDirection;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setNavigationBarColor(Color.parseColor("#C98347"));
+
         setContentView(R.layout.activity_main2);
         imageView = findViewById(R.id.imageView);
-        truth = findViewById(R.id.truth);
-        dare = findViewById(R.id.dare);
-        exit = findViewById(R.id.cross);
+
+        
+
 
 
     }
+
     public void spin(View view) {
         newDirection = random.nextInt(4000);
         int min = 1000, max = newDirection;
@@ -54,10 +63,10 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 imageView.setEnabled(true);
-                Dialog dialog = new Dialog (MainActivity2.this);
-                dialog.setContentView(R.layout.custom_dailog);
-                dialog.show();
+                Intent intent = new Intent(MainActivity2.this, Truthactivity.class);
+                startActivity(intent);
             }
+
             @Override
             public void onAnimationRepeat(Animation animation) {
             }
@@ -65,6 +74,4 @@ public class MainActivity2 extends AppCompatActivity {
         lastDirection = newDirection;
         imageView.startAnimation(rotate);
     }
-
 }
-
