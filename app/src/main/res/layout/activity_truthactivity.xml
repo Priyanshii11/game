@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Truthactivity"
+    android:background="@color/white">
+
+
+
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+
+    <RadioButton
+        android:id="@+id/truth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textStyle="bold|italic"
+        android:text="Truth"
+        android:textSize="30sp" />
+
+    <RadioButton
+        android:id="@+id/dare"
+        android:layout_width="wrap_content"
+        android:textColor="#000000"
+        android:textStyle="bold|italic"
+        android:layout_height="wrap_content"
+        android:text="dare"
+        android:textSize="30sp" />
+</RadioGroup>
+
+
+    </RelativeLayout>
